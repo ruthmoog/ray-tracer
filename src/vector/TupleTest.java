@@ -65,4 +65,42 @@ public class TupleTest {
         // Then
         Assert.assertTrue(isVector);
     }
+
+    @Test
+    public void testTuplesForEquality() {
+        // Given
+        Tuple tuple1 = Tuple.point(1,1,1);
+        Tuple tuple2 = Tuple.point(1,1,1);
+
+        // When
+        boolean areTuplesEqual = tuple1.equals(tuple2);
+
+        // Then
+        Assert.assertTrue(areTuplesEqual);
+    }
+
+    @Test
+    public void testTuplesNotEqual() {
+        // Given
+        Tuple tuple1 = Tuple.point(1,1,1);
+        Tuple tuple2 = Tuple.vector(1,1,1);
+
+        // When
+        boolean areTuplesEqual = tuple1.equals(tuple2);
+
+        // Then
+        Assert.assertFalse(areTuplesEqual);
+    }
+
+    @Test
+    public void testTupleNoteEqualToNull() {
+        // Given
+        Tuple tuple1 = Tuple.point(1,1,1);
+
+        // When
+        boolean isEqual = tuple1.equals(null);
+
+        // Then
+        Assert.assertFalse(isEqual);
+    }
 }

@@ -45,4 +45,21 @@ public class Tuple {
     public boolean isVector() {
         return w == 0;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!(obj instanceof Tuple)) {
+            return false;
+        }
+
+        Tuple other = (Tuple) obj;
+        return  this.x == other.x &&
+                this.y == other.y &&
+                this.z == other.z &&
+                this.w == other.w;
+    }
 }
