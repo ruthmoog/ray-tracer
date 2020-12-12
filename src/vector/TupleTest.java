@@ -103,4 +103,18 @@ public class TupleTest {
         // Then
         Assert.assertFalse(isEqual);
     }
+
+    @Test
+    public void testAddTwoVectors() {
+        // Given
+        Tuple tuple1 = new Tuple(3, -2, 5, 1);
+        Tuple tuple2 = new Tuple(-2, 3, 1, 0);
+        Tuple expected = new Tuple(1,1,6,1);
+
+        // When
+        Tuple actual = tuple1.add(tuple2);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }

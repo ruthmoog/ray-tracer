@@ -62,4 +62,17 @@ public class Tuple {
                 this.z == other.z &&
                 this.w == other.w;
     }
+
+    @Override
+    public String toString() {
+        return "x:" + this.x + " y:" + this.y + " z:" + this.z + " w:" + this.w;
+    }
+
+    public Tuple add(Tuple tuple) {
+        double sumX = getX() + tuple.x;
+        double sumY = getY() + tuple.y;
+        double sumZ = getZ() + tuple.z;
+        double sumW = getW() + tuple.w;
+        return new Tuple(sumX,sumY,sumZ,sumW);
+    }
 }
