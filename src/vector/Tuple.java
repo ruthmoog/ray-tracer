@@ -76,7 +76,14 @@ public class Tuple {
         return new Tuple(sumX,sumY,sumZ,sumW);
     }
 
-    public Tuple subtract(Tuple point2) {
-        return new Tuple(-2,-4,-6,0);
+    public Tuple subtract(Tuple tuple) {
+        int wValue = 1;
+        if (this.getW() == tuple.getW()) {
+            wValue = 0;
+        }
+        double sumX = getX() - tuple.x;
+        double sumY = getY() - tuple.y;
+        double sumZ = getZ() - tuple.z;
+        return new Tuple(sumX, sumY, sumZ, wValue);
     }
 }

@@ -122,14 +122,41 @@ public class TupleTest {
     public void testSubtractTwoPoints() {
         // Given
         Tuple point1 = Tuple.point(3,2,1);
-        Tuple point2 = Tuple.point(5,6,7);
-        Tuple expected = Tuple.vector(-2, -4, -6);
+        Tuple point2 = Tuple.point(6,7,8);
+        Tuple expected = Tuple.vector(-3, -5, -7);
 
         // When
         Tuple actual = point1.subtract(point2);
 
         // Then
         Assert.assertEquals(expected, actual);
+    }
 
+    @Test
+    public void testSubtractVectorFromPoint() {
+        // Given
+        Tuple point = Tuple.point(1,1,1);
+        Tuple vector = Tuple.vector(5,6,7);
+        Tuple expected = Tuple.point(-4,-5,-6);
+
+        // When
+        Tuple actual = point.subtract(vector);
+
+        // Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testSubtractTwoVectors() {
+        // Given
+        Tuple vector1 = Tuple.vector(3,2,1);
+        Tuple vector2 = Tuple.vector(5,6,7);
+        Tuple expected = Tuple.vector(-2,-4,-6);
+
+        // When
+        Tuple actual = vector1.subtract(vector2);
+
+        // Then
+        Assert.assertEquals(expected,actual);
     }
 }
