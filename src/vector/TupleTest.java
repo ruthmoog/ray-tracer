@@ -159,4 +159,32 @@ public class TupleTest {
         // Then
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void testSubtractVectorFromZeroVector() {
+        // Given
+        Tuple vector = Tuple.vector(1,-2,3);
+        Tuple zeroVector = Tuple.vector(0,0,0);
+        Tuple expected = Tuple.vector(-1,2,-3);
+
+        // When
+        Tuple actual = zeroVector.subtract(vector);
+
+        // Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void negateTuple() {
+        // Given
+        Tuple tuple = new Tuple(1,-2,3,-4);
+        Tuple expected = new Tuple(-1,2,-3,4);
+
+        // When
+        Tuple actual = tuple.negate();
+
+        // Then
+        Assert.assertEquals(expected,actual);
+    }
+
 }

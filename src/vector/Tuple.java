@@ -86,4 +86,8 @@ public class Tuple {
         double sumZ = getZ() - tuple.z;
         return new Tuple(sumX, sumY, sumZ, wValue);
     }
+
+    public Tuple negate() {
+        return new Tuple(-getX(),-getY(),-getZ(),-getW());
+    }
 }
