@@ -104,7 +104,7 @@ public class TupleTest {
         Assert.assertFalse(isEqual);
     }
 
-    @Test
+@Test
     public void testAddTwoVectors() {
         // Given
         Tuple tuple1 = new Tuple(3, -2, 5, 1);
@@ -116,5 +116,20 @@ public class TupleTest {
 
         // Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSubtractTwoPoints() {
+        // Given
+        Tuple point1 = Tuple.point(3,2,1);
+        Tuple point2 = Tuple.point(5,6,7);
+        Tuple expected = Tuple.vector(-2, -4, -6);
+
+        // When
+        Tuple actual = point1.subtract(point2);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
     }
 }
