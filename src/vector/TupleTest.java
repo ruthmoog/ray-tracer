@@ -187,4 +187,17 @@ public class TupleTest {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void multiplyingATupleByAScalar() {
+        // Given
+        Tuple tuple = new Tuple(1, -2, 3, -4);
+        Tuple expected = new Tuple(3.5, -7, 10.5, -14);
+
+        // When
+        Tuple actual = tuple.multiply(3.5);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
 }

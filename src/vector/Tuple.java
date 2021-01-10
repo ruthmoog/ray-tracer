@@ -90,4 +90,8 @@ public class Tuple {
     public Tuple negate() {
         return new Tuple(-getX(),-getY(),-getZ(),-getW());
     }
+
+    public Tuple multiply(double scalar) {
+        return new Tuple(getX()*scalar, getY()*scalar, getZ()*scalar, getW()*scalar);
+    }
 }
