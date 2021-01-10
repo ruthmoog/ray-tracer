@@ -200,4 +200,17 @@ public class TupleTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void dividingATupleByAScalar() {
+        // Given
+        Tuple tuple = new Tuple(1, -2, 3, -4);
+        Tuple expected = new Tuple(0.5, -1, 1.5, -2);
+
+        // When
+        Tuple actual = tuple.divide(2);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
 }

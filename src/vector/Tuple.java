@@ -94,4 +94,8 @@ public class Tuple {
     public Tuple multiply(double scalar) {
         return new Tuple(getX()*scalar, getY()*scalar, getZ()*scalar, getW()*scalar);
     }
+
+    public Tuple divide(double scalar) {
+        return new Tuple(getX()/scalar, getY()/scalar, getZ()/scalar, getW()/scalar);
+    }
 }
