@@ -213,4 +213,35 @@ public class TupleTest {
         Assert.assertEquals(expected, actual);
     }
 
+    //TODO: refactor me into a table
+    @Test
+    public void computingTheMagnitude() {
+        // Given
+        Tuple tuple1 = Tuple.vector(1, 0, 0);
+        Tuple tuple2 = Tuple.vector(0, 1, 0);
+        Tuple tuple3 = Tuple.vector(0, 0, 1);
+        Tuple tuple4 = Tuple.vector(1, 2, 3);
+        Tuple tuple5 = Tuple.vector(-1, -2, -3);
+
+        double expected1 = 1;
+        double expected2 = 1;
+        double expected3 = 1;
+        double expected4 = Math.sqrt(14);
+        double expected5 = Math.sqrt(14);
+
+        // When
+        double actual1 = tuple1.magnitude();
+        double actual2 = tuple2.magnitude();
+        double actual3 = tuple3.magnitude();
+        double actual4 = tuple4.magnitude();
+        double actual5 = tuple5.magnitude();
+
+        // Then
+        Assert.assertEquals(expected1, actual1, 0);
+        Assert.assertEquals(expected2, actual2, 0);
+        Assert.assertEquals(expected3, actual3, 0);
+        Assert.assertEquals(expected4, actual4, 0);
+        Assert.assertEquals(expected5, actual5, 0);
+    }
+
 }

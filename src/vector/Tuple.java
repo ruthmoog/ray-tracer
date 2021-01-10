@@ -98,4 +98,12 @@ public class Tuple {
     public Tuple divide(double scalar) {
         return new Tuple(getX()/scalar, getY()/scalar, getZ()/scalar, getW()/scalar);
     }
+
+    public double magnitude() {
+        double xSquared = getX() * getX();
+        double ySquared = getY() * getY();
+        double zSquared = getZ() * getZ();
+        double wSquared = getW() * getW();
+        return Math.sqrt(xSquared+ySquared+zSquared+wSquared);
+    }
 }
