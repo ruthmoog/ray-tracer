@@ -275,4 +275,17 @@ public class TupleTest {
         Assert.assertEquals(expected, actual, 0);
     }
 
+    @Test
+    public void dotProductOfTwoTuples() {
+        // Given
+        Tuple vectorA = Tuple.vector(1,2,3);
+        Tuple vectorB = Tuple.vector(2,3,4);
+        double expected = 20;
+
+        // When
+        double actual = Tuple.dotProduct(vectorA, vectorB);
+
+        // Then
+        Assert.assertEquals(expected, actual, 0);
+    }
 }

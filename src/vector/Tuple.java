@@ -22,6 +22,14 @@ public class Tuple {
         return new Tuple(x, y, z, 0.0);
     }
 
+    public static double dotProduct(Tuple a, Tuple b) {
+        double x = a.getX() * b.getX();
+        double y = a.getY() * b.getY();
+        double z = a.getZ() * b.getZ();
+        double w = a.getW() * b.getW();
+        return x + y + z + w;
+    }
+
     public double getX() {
         return x;
     }
