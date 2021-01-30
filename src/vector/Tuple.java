@@ -30,6 +30,13 @@ public class Tuple {
         return x + y + z + w;
     }
 
+    public static Tuple crossProduct(Tuple a, Tuple b) {
+        double x = a.getY() * b.getZ() - a.getZ() * b.getY();
+        double y = a.getZ() * b.getX() - a.getX() * b.getZ();
+        double z = a.getX() * b.getY() - a.getY() * b.getX();
+        return Tuple.vector(x,y,z);
+    }
+
     public double getX() {
         return x;
     }

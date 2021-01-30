@@ -289,5 +289,21 @@ public class TupleTest {
         Assert.assertEquals(expected, actual, 0);
     }
 
+    @Test
+    public void crossProductOfTwoVectors() {
+        // Given
+        Tuple vector1 = Tuple.vector(1,2,3);
+        Tuple vector2 = Tuple.vector(2,3,4);
+        Tuple expected1 = Tuple.vector(-1,2,-1);
+        Tuple expected2 = Tuple.vector(1,-2,1);
+
+        // When
+        Tuple actual1 = Tuple.crossProduct(vector1, vector2);
+        Tuple actual2 = Tuple.crossProduct(vector2, vector1);
+
+        // Then
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
+    }
 
 }
