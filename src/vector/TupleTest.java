@@ -276,7 +276,7 @@ public class TupleTest {
     }
 
     @Test
-    public void dotProductOfTwoTuples() {
+    public void dotProductOfTwoVectors() {
         // Given
         Tuple vectorA = Tuple.vector(1,2,3);
         Tuple vectorB = Tuple.vector(2,3,4);
@@ -288,4 +288,6 @@ public class TupleTest {
         // Then
         Assert.assertEquals(expected, actual, 0);
     }
+
+
 }
