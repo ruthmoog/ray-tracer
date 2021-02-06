@@ -115,12 +115,4 @@ public class Tuple {
         return Math.sqrt(xSquared+ySquared+zSquared+wSquared);
     }
 
-    public Tuple normalize() {
-        double magnitude = this.magnitude();
-        double x = this.getX() / magnitude;
-        double y = this.getY() / magnitude;
-        double z = this.getZ() / magnitude;
-        double w = this.getW() / magnitude;
-        return new Tuple(x, y, z, w);
-    }
 }

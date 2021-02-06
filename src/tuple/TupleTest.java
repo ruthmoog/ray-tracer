@@ -247,14 +247,14 @@ public class TupleTest {
     @Test
     public void normalizeVector() {
         // Given
-        Tuple vector1 = new Vector(4,0,0);
-        Tuple vector2 = new Vector(1,2,3);
-        Tuple expected1 = new Vector(1,0,0);
-        Tuple expected2 = new Vector(0.2672612419124244,0.5345224838248488,0.8017837257372732);
+        Vector vector1 = new Vector(4,0,0);
+        Vector vector2 = new Vector(1,2,3);
+        Vector expected1 = new Vector(1,0,0);
+        Vector expected2 = new Vector(0.2672612419124244,0.5345224838248488,0.8017837257372732);
 
         // When
-        Tuple actual1 = vector1.normalize();
-        Tuple actual2 = vector2.normalize();
+        Vector actual1 = vector1.normalize();
+        Vector actual2 = vector2.normalize();
 
         // Then
         Assert.assertEquals(expected1, actual1);
@@ -264,11 +264,11 @@ public class TupleTest {
     @Test
     public void magnitudeOfNormalizedVector() {
         // Given
-        Tuple vector = new Vector(1,2,3);
+        Vector vector = new Vector(1,2,3);
         double expected = 1;
 
         // When
-        Tuple normalizedVector = vector.normalize();
+        Vector normalizedVector = vector.normalize();
         double actual = normalizedVector.magnitude();
 
         // Then
