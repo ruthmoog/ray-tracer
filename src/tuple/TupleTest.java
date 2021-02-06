@@ -49,7 +49,7 @@ public class TupleTest {
     @Test
     public void testCreatePoint() {
         // Given
-        Tuple tuple = Tuple.point(1,2,3);
+        Tuple tuple = new Point(1,2,3);
         // When
         boolean isPoint = tuple.isPoint();
         // Then
@@ -59,7 +59,7 @@ public class TupleTest {
     @Test
     public void testCreateVector() {
         // Given
-        Tuple tuple = Tuple.vector(1,2,3);
+        Tuple tuple = new Vector(1,2,3);
         // When
         boolean isVector = tuple.isVector();
         // Then
@@ -69,8 +69,8 @@ public class TupleTest {
     @Test
     public void testTuplesForEquality() {
         // Given
-        Tuple tuple1 = Tuple.point(1,1,1);
-        Tuple tuple2 = Tuple.point(1,1,1);
+        Tuple tuple1 = new Point(1,1,1);
+        Tuple tuple2 = new Point(1,1,1);
 
         // When
         boolean areTuplesEqual = tuple1.equals(tuple2);
@@ -82,8 +82,8 @@ public class TupleTest {
     @Test
     public void testTuplesNotEqual() {
         // Given
-        Tuple tuple1 = Tuple.point(1,1,1);
-        Tuple tuple2 = Tuple.vector(1,1,1);
+        Tuple tuple1 = new Point(1,1,1);
+        Tuple tuple2 = new Vector(1,1,1);
 
         // When
         boolean areTuplesEqual = tuple1.equals(tuple2);
@@ -95,7 +95,7 @@ public class TupleTest {
     @Test
     public void testTupleNoteEqualToNull() {
         // Given
-        Tuple tuple1 = Tuple.point(1,1,1);
+        Tuple tuple1 = new Point(1,1,1);
 
         // When
         boolean isEqual = tuple1.equals(null);
@@ -121,9 +121,9 @@ public class TupleTest {
     @Test
     public void testSubtractTwoPoints() {
         // Given
-        Tuple point1 = Tuple.point(3,2,1);
-        Tuple point2 = Tuple.point(6,7,8);
-        Tuple expected = Tuple.vector(-3, -5, -7);
+        Tuple point1 = new Point(3,2,1);
+        Tuple point2 = new Point(6,7,8);
+        Tuple expected = new Vector(-3, -5, -7);
 
         // When
         Tuple actual = point1.subtract(point2);
@@ -135,9 +135,9 @@ public class TupleTest {
     @Test
     public void testSubtractVectorFromPoint() {
         // Given
-        Tuple point = Tuple.point(1,1,1);
-        Tuple vector = Tuple.vector(5,6,7);
-        Tuple expected = Tuple.point(-4,-5,-6);
+        Tuple point = new Point(1,1,1);
+        Tuple vector = new Vector(5,6,7);
+        Tuple expected = new Point(-4,-5,-6);
 
         // When
         Tuple actual = point.subtract(vector);
@@ -149,9 +149,9 @@ public class TupleTest {
     @Test
     public void testSubtractTwoVectors() {
         // Given
-        Tuple vector1 = Tuple.vector(3,2,1);
-        Tuple vector2 = Tuple.vector(5,6,7);
-        Tuple expected = Tuple.vector(-2,-4,-6);
+        Tuple vector1 = new Vector(3,2,1);
+        Tuple vector2 = new Vector(5,6,7);
+        Tuple expected = new Vector(-2,-4,-6);
 
         // When
         Tuple actual = vector1.subtract(vector2);
@@ -163,9 +163,9 @@ public class TupleTest {
     @Test
     public void testSubtractVectorFromZeroVector() {
         // Given
-        Tuple vector = Tuple.vector(1,-2,3);
-        Tuple zeroVector = Tuple.vector(0,0,0);
-        Tuple expected = Tuple.vector(-1,2,-3);
+        Tuple vector = new Vector(1,-2,3);
+        Tuple zeroVector = new Vector(0,0,0);
+        Tuple expected = new Vector(-1,2,-3);
 
         // When
         Tuple actual = zeroVector.subtract(vector);
@@ -217,11 +217,11 @@ public class TupleTest {
     @Test
     public void computingTheMagnitude() {
         // Given
-        Tuple tuple1 = Tuple.vector(1, 0, 0);
-        Tuple tuple2 = Tuple.vector(0, 1, 0);
-        Tuple tuple3 = Tuple.vector(0, 0, 1);
-        Tuple tuple4 = Tuple.vector(1, 2, 3);
-        Tuple tuple5 = Tuple.vector(-1, -2, -3);
+        Tuple tuple1 = new Vector(1, 0, 0);
+        Tuple tuple2 = new Vector(0, 1, 0);
+        Tuple tuple3 = new Vector(0, 0, 1);
+        Tuple tuple4 = new Vector(1, 2, 3);
+        Tuple tuple5 = new Vector(-1, -2, -3);
 
         double expected1 = 1;
         double expected2 = 1;
@@ -247,10 +247,10 @@ public class TupleTest {
     @Test
     public void normalizeVector() {
         // Given
-        Tuple vector1 = Tuple.vector(4,0,0);
-        Tuple vector2 = Tuple.vector(1,2,3);
-        Tuple expected1 = Tuple.vector(1,0,0);
-        Tuple expected2 = Tuple.vector(0.2672612419124244,0.5345224838248488,0.8017837257372732);
+        Tuple vector1 = new Vector(4,0,0);
+        Tuple vector2 = new Vector(1,2,3);
+        Tuple expected1 = new Vector(1,0,0);
+        Tuple expected2 = new Vector(0.2672612419124244,0.5345224838248488,0.8017837257372732);
 
         // When
         Tuple actual1 = vector1.normalize();
@@ -264,7 +264,7 @@ public class TupleTest {
     @Test
     public void magnitudeOfNormalizedVector() {
         // Given
-        Tuple vector = Tuple.vector(1,2,3);
+        Tuple vector = new Vector(1,2,3);
         double expected = 1;
 
         // When
@@ -278,8 +278,8 @@ public class TupleTest {
     @Test
     public void dotProductOfTwoVectors() {
         // Given
-        Tuple vectorA = Tuple.vector(1,2,3);
-        Tuple vectorB = Tuple.vector(2,3,4);
+        Tuple vectorA = new Vector(1,2,3);
+        Tuple vectorB = new Vector(2,3,4);
         double expected = 20;
 
         // When
@@ -292,10 +292,10 @@ public class TupleTest {
     @Test
     public void crossProductOfTwoVectors() {
         // Given
-        Tuple vector1 = Tuple.vector(1,2,3);
-        Tuple vector2 = Tuple.vector(2,3,4);
-        Tuple expected1 = Tuple.vector(-1,2,-1);
-        Tuple expected2 = Tuple.vector(1,-2,1);
+        Tuple vector1 = new Vector(1,2,3);
+        Tuple vector2 = new Vector(2,3,4);
+        Tuple expected1 = new Vector(-1,2,-1);
+        Tuple expected2 = new Vector(1,-2,1);
 
         // When
         Tuple actual1 = Tuple.crossProduct(vector1, vector2);

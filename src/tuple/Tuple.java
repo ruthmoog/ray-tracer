@@ -14,13 +14,6 @@ public class Tuple {
         this.w = w;
     }
 
-    public static Tuple point(double x, double y, double z) {
-        return new Tuple(x, y, z, 1.0);
-    }
-
-    public static Tuple vector(double x, double y, double z) {
-        return new Tuple(x, y, z, 0.0);
-    }
 
     public static double dotProduct(Tuple a, Tuple b) {
         double x = a.getX() * b.getX();
@@ -34,7 +27,7 @@ public class Tuple {
         double x = a.getY() * b.getZ() - a.getZ() * b.getY();
         double y = a.getZ() * b.getX() - a.getX() * b.getZ();
         double z = a.getX() * b.getY() - a.getY() * b.getX();
-        return Tuple.vector(x,y,z);
+        return new Vector(x,y,z);
     }
 
     public double getX() {
