@@ -1,4 +1,4 @@
-package vector;
+package tuple;
 
 public class Tuple {
 
