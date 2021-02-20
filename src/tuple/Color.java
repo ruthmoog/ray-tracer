@@ -31,6 +31,16 @@ public class Color {
         return new Color(red, green, blue);
     }
 
+
+    public Color subract(Color color) {
+        double red = this.red - color.getRed();
+        double green = this.green - color.getGreen();
+        double blue = this.blue - color.getBlue();
+
+        return new Color(red, green, blue);
+    }
+
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -45,5 +55,10 @@ public class Color {
         return  this.red == other.red &&
                 this.green == other.green &&
                 this.blue == other.blue;
+    }
+
+    @Override
+    public String toString() {
+        return "red:" + this.red + " green:" + this.green + " blue:" + this.blue;
     }
 }
