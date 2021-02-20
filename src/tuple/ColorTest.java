@@ -44,4 +44,18 @@ public class ColorTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void multiplyColorByScalar() {
+        // Given
+        Color color = new Color(0.2, 0.3, 0.4);
+        int scalar = 2;
+        Color expected = new Color(0.4, 0.6, 0.8);
+
+        // When
+        Color actual = color.multiply(scalar);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
 }

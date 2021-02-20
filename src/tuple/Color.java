@@ -41,6 +41,14 @@ public class Color {
     }
 
 
+    public Color multiply(int scalar) {
+        double red = this.red * scalar;
+        double green = this.green * scalar;
+        double blue = this.blue * scalar;
+
+        return new Color(red, green, blue);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
