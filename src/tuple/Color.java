@@ -24,9 +24,9 @@ public class Color {
     }
 
     public Color add(Color color) {
-        double red = color.getRed() + this.red;
-        double green = color.getGreen() + this.green;
-        double blue = color.getBlue() + this.blue;
+        double red = this.red + color.getRed();
+        double green = this.green + color.getGreen();
+        double blue = this.blue + color.getBlue();
 
         return new Color(red, green, blue);
     }
