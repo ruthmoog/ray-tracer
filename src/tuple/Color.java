@@ -49,6 +49,15 @@ public class Color {
         return new Color(red, green, blue);
     }
 
+    public Color multiply(Color color) {
+        // Technically this is called the Hadamard product, or Schur product
+        double red = this.red * color.getRed();
+        double green = this.green * color.getGreen();
+        double blue = this.blue * color.getBlue();
+
+        return new Color(red, green, blue);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

@@ -58,4 +58,17 @@ public class ColorTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void multiplyColors() {
+        // Given
+        Color color1 = new Color(1, 0.2, 0.4);
+        Color color2 = new Color(0.9, 1, 0.1);
+        Color expected = new Color(0.9, 0.2, 0.04000000000000001);
+
+        // When
+        Color actual = color1.multiply(color2);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }
