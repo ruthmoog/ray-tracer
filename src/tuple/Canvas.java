@@ -8,11 +8,14 @@ public class Canvas {
     public Canvas(int height, int width) {
         this.height = height;
         this.width = width;
-        // create a 2d array of colors default to 000
+        initializeCanvas();
+    }
+
+    private void initializeCanvas() {
         this.pixels = new Color[height][width];
         for (int row = 0; row < this.pixels.length; row++) {
             for (int column = 0; column < this.pixels[row].length; column++) {
-                this.pixels[row][column] = new Color(0,0,0);
+                this.pixels[row][column] = Color.black();
             }
         }
     }

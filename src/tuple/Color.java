@@ -5,6 +5,10 @@ public class Color {
     private final double green;
     private final double blue;
 
+    public static Color black() {
+        return new Color(0,0,0);
+    }
+
     public Color(double red, double green, double blue) {
         this.red = red;
         this.green = green;
