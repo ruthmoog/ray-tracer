@@ -1,13 +1,12 @@
 package tuple;
 
 public class Color {
+
+    public static final Color DEFAULT_COLOR = new Color(0,0,0);
+
     private final double red;
     private final double green;
     private final double blue;
-
-    public static Color black() {
-        return new Color(0,0,0);
-    }
 
     public Color(double red, double green, double blue) {
         this.red = red;

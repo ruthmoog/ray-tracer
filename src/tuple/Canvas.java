@@ -15,7 +15,7 @@ public class Canvas {
         this.pixels = new Color[height][width];
         for (int row = 0; row < this.pixels.length; row++) {
             for (int column = 0; column < this.pixels[row].length; column++) {
-                this.pixels[row][column] = Color.black();
+                this.pixels[row][column] = Color.DEFAULT_COLOR;
             }
         }
     }
