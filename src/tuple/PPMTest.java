@@ -12,7 +12,7 @@ public class PPMTest {
         String expected = "P3\n5 3\n255\n";
 
         // When
-        String actual = PPM.convertToPpm(canvas);
+        String actual = PPM.convert(canvas);
 
         // Then
         Assert.assertTrue(actual.startsWith(expected));
@@ -30,7 +30,7 @@ public class PPMTest {
         canvas.writePixel(0, 0, color1);
         canvas.writePixel(2, 1, color2);
         canvas.writePixel(4, 2, color3);
-        String actual = PPM.convertToPpm(canvas); //todo: rename to convert
+        String actual = PPM.convert(canvas);
         String[] lines = actual.split("\n");
 
         String blackPixel = "0 0 0";

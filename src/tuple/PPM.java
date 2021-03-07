@@ -8,7 +8,7 @@ public class PPM {
     private static final String PPM_TYPE = "P3";
     private static final String MAX_COLOR_VALUE = "255";
 
-    static String convertToPpm(Canvas canvas) {
+    static String convert(Canvas canvas) {
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter);
 
