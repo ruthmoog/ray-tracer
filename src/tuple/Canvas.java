@@ -12,7 +12,7 @@ public class Canvas {
     }
 
     private void initializeCanvas() {
-        this.pixels = new Color[height][width];
+        this.pixels = new Color[width][height];
         for (int row = 0; row < this.pixels.length; row++) {
             for (int column = 0; column < this.pixels[row].length; column++) {
                 this.pixels[row][column] = Color.DEFAULT_COLOR;
