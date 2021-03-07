@@ -13,7 +13,7 @@ public class PPM {
         PrintWriter printWriter = new PrintWriter(stringWriter);
 
         printWriter.println(PPM_TYPE);
-        printWriter.println(canvas.getHeight() + " " + canvas.getWidth());
+        printWriter.println(canvas.getWidth() + " " + canvas.getHeight());
         printWriter.println(MAX_COLOR_VALUE);
 
         return stringWriter.toString();

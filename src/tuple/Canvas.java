@@ -5,7 +5,7 @@ public class Canvas {
     private int height;
     private Color[][] pixels;
 
-    public Canvas(int height, int width) {
+    public Canvas(int width, int height) {
         this.height = height;
         this.width = width;
         initializeCanvas();

@@ -8,11 +8,11 @@ public class CanvasTest {
     @Test
     public void createCanvas() {
         // Given
-        int height = 10;
-        int width = 20;
+        int height = 20;
+        int width = 10;
 
         // When
-        Canvas canvas = new Canvas(height, width);
+        Canvas canvas = new Canvas(width, height);
 
         // Then
         Assert.assertEquals(height, canvas.getHeight(),0);
