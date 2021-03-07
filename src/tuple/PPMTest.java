@@ -9,7 +9,7 @@ public class PPMTest {
     public void constructPPMHeader() {
         // Given
         Canvas canvas = new Canvas(5,3);
-        String expected = "P3\n5 3\n255";
+        String expected = "P3\n5 3\n255\n";
 
         // When
         String actual = PPM.convertToPpm(canvas);

@@ -1,17 +1,21 @@
 package tuple;
 
+import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public class PPM {
 
-    public static String convertToPpm(Canvas canvas) {
+    private static final String PPM_TYPE = "P3";
+    private static final String MAX_COLOR_VALUE = "255";
+
+    static String convertToPpm(Canvas canvas) {
         StringWriter stringWriter = new StringWriter();
-        stringWriter
-                .append("P3")
-                .append(System.getProperty("line.separator"))
-                .append(canvas.getHeight() + " " + canvas.getWidth())
-                .append(System.getProperty("line.separator"))
-                .append("255");
+        PrintWriter printWriter = new PrintWriter(stringWriter);
+
+        printWriter.println(PPM_TYPE);
+        printWriter.println(canvas.getHeight() + " " + canvas.getWidth());
+        printWriter.println(MAX_COLOR_VALUE);
+
         return stringWriter.toString();
     }
 }
