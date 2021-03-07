@@ -33,5 +33,4 @@ public class CanvasTest {
         // Then
         Assert.assertEquals(red, canvas.pixelAt(x, y));
     }
-
 }
