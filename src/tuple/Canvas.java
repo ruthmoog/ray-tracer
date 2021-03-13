@@ -28,11 +28,11 @@ public class Canvas {
         return height;
     }
 
-    public Color pixelAt(int x, int y) {
-        return pixels[x][y];
+    public Color pixelAt(int column, int row) {
+        return pixels[column][row];
     }
 
-    public void writePixel(int x, int y, Color color) {
-        pixels[x][y] = color;
+    public void writePixel(int column, int row, Color color) {
+        pixels[column][row] = color;
     }
 }
