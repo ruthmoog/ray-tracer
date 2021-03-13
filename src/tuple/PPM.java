@@ -21,7 +21,7 @@ public class PPM {
 
         for (int row = 0; row < canvas.getHeight(); row++) {
             for (int column = 0; column < canvas.getWidth(); column++) {
-                Color color = canvas.pixelAt(column, row);
+                Color color = canvas.pixelAt(row, column);
                 int red = (int)Math.round(clamp(color.getRed()) * MAX_COLOR_VALUE);
                 int green = (int)Math.round(clamp(color.getGreen()) * MAX_COLOR_VALUE);
                 int blue = (int)Math.round(clamp(color.getBlue()) * MAX_COLOR_VALUE);

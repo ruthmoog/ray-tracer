@@ -28,9 +28,9 @@ public class CanvasTest {
         int y = 3;
 
         // When
-        canvas.writePixel(x, y, red);
+        canvas.writePixel(y, x, red);
 
         // Then
-        Assert.assertEquals(red, canvas.pixelAt(x, y));
+        Assert.assertEquals(red, canvas.pixelAt(y, x));
     }
 }

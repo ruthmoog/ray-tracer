@@ -28,8 +28,8 @@ public class PPMTest {
 
         // When
         canvas.writePixel(0, 0, color1);
-        canvas.writePixel(2, 1, color2);
-        canvas.writePixel(4, 2, color3);
+        canvas.writePixel(1, 2, color2);
+        canvas.writePixel(2, 4, color3);
         String actual = PPM.convert(canvas);
         String[] lines = actual.split("\n");
 
@@ -54,7 +54,7 @@ public class PPMTest {
         // When
         canvas.writePixel(0, 0, green);
         canvas.writePixel(1, 1, red);
-        canvas.writePixel(1, 0, blue);
+        canvas.writePixel(0, 1, blue);
 
         String actual = PPM.convert(canvas);
         String[] lines = actual.split("\n");
