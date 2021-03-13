@@ -22,19 +22,24 @@ public class PPM {
         for (int row = 0; row < canvas.getHeight(); row++) {
             for (int column = 0; column < canvas.getWidth(); column++) {
                 Color color = canvas.pixelAt(row, column);
-                int red = (int)Math.round(clamp(color.getRed()) * MAX_COLOR_VALUE);
-                int green = (int)Math.round(clamp(color.getGreen()) * MAX_COLOR_VALUE);
-                int blue = (int)Math.round(clamp(color.getBlue()) * MAX_COLOR_VALUE);
+                int red = getPixelColor(color.getRed());
+                int green = getPixelColor(color.getGreen());
+                int blue = getPixelColor(color.getBlue());
 
+                String pixel = red + " " + green + " " + blue;
                 if(column == (canvas.getWidth() - 1)) {
-                    printWriter.println(red + " " + green + " " + blue);
+                    printWriter.println(pixel);
                 } else {
-                    printWriter.print(red + " " + green + " " + blue + " ");
+                    printWriter.print(pixel + " ");
                 }
             }
         }
 
         return stringWriter.toString();
+    }
+
+    private static int getPixelColor(double red) {
+        return (int) Math.round(clamp(red) * MAX_COLOR_VALUE);
     }
 
     static private double clamp(double value) {
