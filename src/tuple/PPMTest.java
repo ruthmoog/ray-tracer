@@ -1,6 +1,7 @@
 package tuple;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class PPMTest {
@@ -43,4 +44,34 @@ public class PPMTest {
         Assert.assertEquals(String.join(" ", blackPixel, blackPixel, blackPixel, blackPixel, "0 0 255"), lines[5]);
     }
 
+
+    /**
+     * Parked - not sure if the new line should be mapped to the canvas AND
+     * capped line length at 70?  Most programs dont cap line length so parking this for now.
+     */
+    @Ignore
+    @Test
+    public void splitLinesForPPMFiles() {
+        // Given
+        Canvas canvas = new Canvas(10,2);
+        Color color = new Color(1,0.8,0.6);
+        int maxLineLength = 70;
+
+        for (int row = 0; row < canvas.getHeight(); row++) {
+            for (int column = 0; column < canvas.getWidth(); column++) {
+                canvas.writePixel(row, column, color);
+            }
+        }
+
+        // When
+        String actual = PPM.convert(canvas);
+        String[] lines = actual.split("\n");
+
+        // Then
+        Assert.assertTrue("bebe says no", lines[3].length() <= maxLineLength);
+        Assert.assertTrue(lines[4].length() <= maxLineLength);
+        Assert.assertTrue(lines[5].length() <= maxLineLength);
+        Assert.assertTrue(lines[6].length() <= maxLineLength);
+
+    }
 }
