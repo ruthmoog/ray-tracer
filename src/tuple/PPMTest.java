@@ -44,6 +44,17 @@ public class PPMTest {
         Assert.assertEquals(String.join(" ", blackPixel, blackPixel, blackPixel, blackPixel, "0 0 255"), lines[5]);
     }
 
+    @Test
+    public void PPMFilesAreTerminatedWithNewlineChar() {
+        // Given
+        Canvas canvas = new Canvas(5,3);
+
+        // When
+        String actual = PPM.convert(canvas);
+
+        // Then
+        Assert.assertTrue(actual.endsWith(System.lineSeparator()));
+    }
 
     /**
      * Parked - not sure if the new line should be mapped to the canvas AND
