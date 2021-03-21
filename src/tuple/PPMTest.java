@@ -43,28 +43,4 @@ public class PPMTest {
         Assert.assertEquals(String.join(" ", blackPixel, blackPixel, blackPixel, blackPixel, "0 0 255"), lines[5]);
     }
 
-    @Test
-    public void constructPPMPixelDataANTISLIME() {
-        // Given
-        Canvas canvas = new Canvas(2,2);
-        Color red = new Color(1, 0, 0);
-        Color green = new Color(0,1,0);
-        Color blue = new Color(0,0,1);
-
-        // When
-        canvas.writePixel(0, 0, green);
-        canvas.writePixel(1, 1, red);
-        canvas.writePixel(0, 1, blue);
-
-        String actual = PPM.convert(canvas);
-        String[] lines = actual.split("\n");
-
-        System.out.println(actual);
-
-        String blackPixel = "0 0 0";
-
-        // Then
-        Assert.assertEquals(5, lines.length);
-        Assert.assertEquals(String.join(" ", "0 255 0", "0 0 255"), lines[3]);
-        Assert.assertEquals(String.join(" ", blackPixel, "255 0 0"), lines[4]);
-    }}
+}
