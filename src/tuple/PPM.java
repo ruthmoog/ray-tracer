@@ -1,5 +1,6 @@
 package tuple;
 
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
@@ -36,6 +37,13 @@ public class PPM {
         }
 
         return stringWriter.toString();
+    }
+
+    public static void saveToFile(Canvas canvas, String fileName) throws FileNotFoundException {
+        String convertedCanvas = convert(canvas);
+        try (PrintWriter out = new PrintWriter(fileName)) {
+            out.print(convertedCanvas);
+        }
     }
 
     private static int getPixelColor(double red) {
