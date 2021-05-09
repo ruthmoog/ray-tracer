@@ -2,10 +2,10 @@ package tuple;
 
 public class Dimension {
 
-    public int width;
-    public int height;
+    public Width width;
+    public Height height;
 
-    public Dimension(int width, int height) {
+    public Dimension(Width width, Height height) {
         this.height = height;
         this.width = width;
     }

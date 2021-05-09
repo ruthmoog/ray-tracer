@@ -8,7 +8,7 @@ public class CanvasTest {
     @Test
     public void createCanvas() {
         // Given
-        Dimension dimension = new Dimension(20, 10);
+        Dimension dimension = new Dimension(new Width(20), new Height(10));
 
         // When
         Canvas canvas = new Canvas(dimension);
@@ -21,7 +21,7 @@ public class CanvasTest {
     @Test
     public void writePixelsToCanvas() {
         // Given
-        Dimension dimension = new Dimension(10, 20);
+        Dimension dimension = new Dimension(new Width(20), new Height(10));
         Canvas canvas = new Canvas(dimension);
         Color red = new Color(1,0,0);
         int x = 2;

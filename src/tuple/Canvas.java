@@ -6,8 +6,8 @@ public class Canvas {
     private Color[][] pixels;
 
     public Canvas(Dimension dimension) {
-        this.height = dimension.height;
-        this.width = dimension.width;
+        this.height = dimension.height.value;
+        this.width = dimension.width.value;
         initializeCanvas();
     }
 

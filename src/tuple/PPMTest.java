@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class PPMTest {
 
-    private final Dimension DIMENSIONS = new Dimension(5,3);
+    private final Dimension DIMENSIONS = new Dimension(new Width(5),new Height(3));
 
     @Test
     public void constructPPMHeader() {
@@ -66,7 +66,7 @@ public class PPMTest {
     @Test
     public void splitLinesForPPMFiles() {
         // Given
-        Canvas canvas = new Canvas(new Dimension(10,2));
+        Canvas canvas = new Canvas(new Dimension(new Width(10),new Height(2)));
         Color color = new Color(1,0.8,0.6);
         int maxLineLength = 70;
 
