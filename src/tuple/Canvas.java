@@ -5,9 +5,9 @@ public class Canvas {
     private int height;
     private Color[][] pixels;
 
-    public Canvas(int width, int height) {
-        this.height = height;
-        this.width = width;
+    public Canvas(Dimension dimension) {
+        this.height = dimension.height;
+        this.width = dimension.width;
         initializeCanvas();
     }
 

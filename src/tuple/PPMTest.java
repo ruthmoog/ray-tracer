@@ -6,10 +6,12 @@ import org.junit.Test;
 
 public class PPMTest {
 
+    private final Dimension DIMENSIONS = new Dimension(5,3);
+
     @Test
     public void constructPPMHeader() {
         // Given
-        Canvas canvas = new Canvas(5,3);
+        Canvas canvas = new Canvas(DIMENSIONS);
         String expected = "P3\n5 3\n255\n";
 
         // When
@@ -22,7 +24,7 @@ public class PPMTest {
     @Test
     public void constructPPMPixelData() {
         // Given
-        Canvas canvas = new Canvas(5,3);
+        Canvas canvas = new Canvas(DIMENSIONS);
         Color color1 = new Color(1.5, 0, 0);
         Color color2 = new Color(0, 0.5, 0);
         Color color3 = new Color(-0.5, 0, 1);
@@ -47,7 +49,7 @@ public class PPMTest {
     @Test
     public void PPMFilesAreTerminatedWithNewlineChar() {
         // Given
-        Canvas canvas = new Canvas(5,3);
+        Canvas canvas = new Canvas(DIMENSIONS);
 
         // When
         String actual = PPM.convert(canvas);
@@ -64,7 +66,7 @@ public class PPMTest {
     @Test
     public void splitLinesForPPMFiles() {
         // Given
-        Canvas canvas = new Canvas(10,2);
+        Canvas canvas = new Canvas(new Dimension(10,2));
         Color color = new Color(1,0.8,0.6);
         int maxLineLength = 70;
 
@@ -83,6 +85,5 @@ public class PPMTest {
         Assert.assertTrue(lines[4].length() <= maxLineLength);
         Assert.assertTrue(lines[5].length() <= maxLineLength);
         Assert.assertTrue(lines[6].length() <= maxLineLength);
-
     }
 }
