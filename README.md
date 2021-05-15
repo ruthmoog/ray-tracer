@@ -16,3 +16,6 @@ Ray tracing is a 3D computer graphics rendering technique, for image generation.
 
 The first image I've created with the ray tracer, from chapter 2, Drawing on a canvas. A 4 pixel canvas with one coloured pixel.
 > ![The first image I have created with the ray tracer](https://github.com/ruthmoog/ray-tracer/blob/main/assets/MyFirstImage.png)
+
+Experimenting with trajectory on a 100 x 100 canvas
+> ![A projectile affected by gravity](https://github.com/ruthmoog/ray-tracer/blob/main/assets/2Trajectory.png)
