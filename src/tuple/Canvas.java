@@ -33,6 +33,19 @@ public class Canvas {
     }
 
     public void writePixel(int row, int column, Color color) {
-        pixels[column][row] = color;
+//        if(row < 0 || column < 0) return;
+//        if(row < this.getWidth() || column < this.getHeight())return;
+
+        try {
+            pixels[column][row] = color;
+        }catch (Exception e) {
+
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Canvas of width: " + this.getWidth() + " and height of: "+this.getHeight();
     }
 }
