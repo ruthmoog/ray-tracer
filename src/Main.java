@@ -1,6 +1,4 @@
-import canvas.Canvas;
-import canvas.Color;
-import canvas.PPM;
+import canvas.*;
 import tuple.*;
 
 import java.io.FileNotFoundException;

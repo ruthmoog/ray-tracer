@@ -1,4 +1,4 @@
-package tuple;
+package canvas;
 
 public class Height {
 

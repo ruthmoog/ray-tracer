@@ -1,7 +1,5 @@
 package canvas;
 
-import tuple.Dimension;
-
 public class Canvas {
     private int width;
     private int height;

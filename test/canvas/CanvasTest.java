@@ -1,13 +1,7 @@
 package canvas;
 
-import canvas.Canvas;
-import canvas.Color;
 import org.junit.Assert;
 import org.junit.Test;
-
-import tuple.Dimension;
-import tuple.Height;
-import tuple.Width;
 
 public class CanvasTest {
 
