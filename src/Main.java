@@ -1,4 +1,6 @@
 import canvas.*;
+import projectile.Environment;
+import projectile.Projectile;
 import tuple.*;
 
 import java.io.FileNotFoundException;

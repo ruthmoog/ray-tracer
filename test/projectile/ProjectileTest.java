@@ -1,7 +1,11 @@
-package tuple;
+package projectile;
 
 import org.junit.Assert;
 import org.junit.Test;
+import projectile.Environment;
+import projectile.Projectile;
+import tuple.Point;
+import tuple.Vector;
 
 public class ProjectileTest {
 

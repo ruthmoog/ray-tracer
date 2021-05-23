@@ -1,4 +1,8 @@
-package tuple;
+package projectile;
+
+import tuple.Point;
+import tuple.Tuple;
+import tuple.Vector;
 
 public class Projectile {
 

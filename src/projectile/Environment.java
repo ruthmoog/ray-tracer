@@ -1,4 +1,6 @@
-package tuple;
+package projectile;
+
+import tuple.Vector;
 
 public class Environment {
 
