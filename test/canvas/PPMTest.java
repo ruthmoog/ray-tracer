@@ -1,8 +1,14 @@
-package tuple;
+package canvas;
 
+import canvas.Canvas;
+import canvas.Color;
+import canvas.PPM;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import tuple.Dimension;
+import tuple.Height;
+import tuple.Width;
 
 public class PPMTest {
 

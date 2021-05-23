@@ -1,4 +1,4 @@
-package tuple;
+package canvas;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

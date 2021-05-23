@@ -1,5 +1,6 @@
-package tuple;
+package canvas;
 
+import canvas.Color;
 import org.junit.Assert;
 import org.junit.Test;
 
