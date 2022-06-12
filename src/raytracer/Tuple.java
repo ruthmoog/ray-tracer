@@ -43,4 +43,21 @@ public class Tuple {
         Tuple tuple = (Tuple) o;
         return Double.compare(tuple.x, x) == 0 && Double.compare(tuple.y, y) == 0 && Double.compare(tuple.z, z) == 0 && Double.compare(tuple.w, w) == 0;
     }
+
+    @Override
+    public String toString() {
+        return "Tuple{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                ", w=" + w +
+                '}';
+    }
+
+    public Tuple add(Tuple tuple) {
+        return new Tuple(this.x + tuple.x,
+                this.y + tuple.y,
+                this.z + tuple.z,
+                this.w + tuple.w);
+    }
 }

@@ -54,4 +54,15 @@ public class TestTuple {
         Assert.assertEquals("Identical vectors should be the same", tupleA, tupleB);
         Assert.assertNotEquals("Non-identical vectors should not be the same", tupleA, tupleC);
     }
+
+    @Test
+    public void testAddingTwoTuples() {
+        Tuple point = Tuple.point(3,-2,5);
+        Tuple vector = Tuple.vector(-2, 3, 1);
+        Tuple expectedPoint = Tuple.point(1,1,6);
+
+        Tuple actualPoint = point.add(vector);
+
+        Assert.assertEquals(expectedPoint, actualPoint);
+    }
 }
