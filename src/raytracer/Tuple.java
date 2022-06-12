@@ -1,5 +1,7 @@
 package raytracer;
 
+import java.util.Objects;
+
 public class Tuple {
     private double x;
     private double y;
@@ -32,5 +34,13 @@ public class Tuple {
 
     public boolean isVector() {
         return this.w == 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tuple tuple = (Tuple) o;
+        return Double.compare(tuple.x, x) == 0 && Double.compare(tuple.y, y) == 0 && Double.compare(tuple.z, z) == 0 && Double.compare(tuple.w, w) == 0;
     }
 }

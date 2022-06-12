@@ -28,4 +28,30 @@ public class TestTuple {
         Assert.assertTrue("Should be a vector but isn't", tuple.isVector());
         Assert.assertFalse("Should not be a point", tuple.isPoint());
     }
+
+    @Test
+    public void testTwoLikePointsAreEqual() {
+        double x = 4.3;
+        double y = -4.2;
+        double z = 3.1;
+        Tuple tupleA = Tuple.point(x,y,z);
+        Tuple tupleB = Tuple.point(x,y,z);
+        Tuple tupleC = Tuple.point(x,y,3);
+
+        Assert.assertEquals("Identical points should be the same", tupleA, tupleB);
+        Assert.assertNotEquals("Non-identical points should not be the same", tupleA, tupleC);
+    }
+
+    @Test
+    public void testTwoLikeVectorsAreEqual() {
+        double x = 4.3;
+        double y = -4.2;
+        double z = 3.1;
+        Tuple tupleA = Tuple.vector(x,y,z);
+        Tuple tupleB = Tuple.vector(x,y,z);
+        Tuple tupleC = Tuple.vector(x,y,3);
+
+        Assert.assertEquals("Identical vectors should be the same", tupleA, tupleB);
+        Assert.assertNotEquals("Non-identical vectors should not be the same", tupleA, tupleC);
+    }
 }
