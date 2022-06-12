@@ -4,6 +4,11 @@ public class Tuple {
     private double x;
     private double y;
     private double z;
+
+    public double getW() {
+        return w;
+    }
+
     private double w;
 
     public Tuple(double x, double y, double z, double w) {
